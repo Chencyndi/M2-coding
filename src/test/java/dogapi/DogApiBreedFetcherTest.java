@@ -20,7 +20,7 @@ class DogApiBreedFetcherTest {
     }
 
     @Test
-    void testInvalidBreedThrowsException() {
+    void testInvalidBreedThrowsException() throws IOException {
         BreedFetcher fetcher = new DogApiBreedFetcher();
         assertThrows(BreedFetcher.BreedNotFoundException.class, () -> fetcher.getSubBreeds("cat"));
     }
